@@ -1,0 +1,10 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '11.0'
+use_frameworks!
+
+target 'MobileAnalyticsChartSwiftExamplePods' do
+  pod 'MobileAnalyticsChartSwift',
+    :git => 'https://github.com/yandex-money/mobile-analytics-chart-swift.git',
+    :tag => '1.0.0'
+end
