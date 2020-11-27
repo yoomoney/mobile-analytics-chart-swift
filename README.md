@@ -45,9 +45,9 @@
 
 1. Install CocoaPods
 
-  ```shell
-  gem install cocoapods
-  ```
+```shell
+gem install cocoapods
+```
 
 2. Create file Podfile\
 
@@ -56,17 +56,17 @@
 3. Add dependencie in `Podfile`.\
    [Example](https://github.com/yoomoney-tech/mobile-analytics-chart-swift/tree/master/MobileAnalyticsChartSwiftExamplePods/Podfile-example) `Podfile`from demo-app.
 
-  ```shell
-  source 'https://github.com/CocoaPods/Specs.git'
-  platform :ios, '11.0'
-  use_frameworks!
+```shell
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '11.0'
+use_frameworks!
 
-  target 'Your Target Name' do
-    pod 'MobileAnalyticsChartSwift',
-      :git => 'https://github.com/yoomoney-tech/mobile-analytics-chart-swift.git',
-      :tag => 'tag'
-  end
-  ```
+target 'Your Target Name' do
+pod 'MobileAnalyticsChartSwift',
+  :git => 'https://github.com/yoomoney-tech/mobile-analytics-chart-swift.git',
+  :tag => 'tag'
+end
+```
 
   > `Your Target Name` - the target name in Xcode for your application.\
   > `tag` - SDK version. The current version can be found on github in the [releases](https://github.com/yoomoney-tech/mobile-analytics-chart-swift/releases).
@@ -83,13 +83,13 @@ Carthage is not currently supported.
 
 > To work with MobileAnalyticsChartSwift entities, import the dependencies into the source file
 
-  ```swift
-  import MobileAnalyticsChartSwift
-  ```
+```swift
+import MobileAnalyticsChartSwift
+```
 
 An example of creating a  `AnalyticsChartSpriteKitModuleInputData`:
 
-  ```swift
+```swift
 // Creating a fade animation configuration
 let fadeAnimation = ChartFadeAnimation(
   fadeOutColor: UIColor(white: 219 / 255, alpha: 1),
@@ -208,7 +208,7 @@ let chartViewModel = AnalyticsChartSpriteKitModuleInputData(
     maxStaticValue: nil
   )
 )
-  ```
+```
 
 2. Create `ChartView` and `AnalyticsChartSpriteKitModuleInput` using `AnalyticsChartSpriteKitAssembly`.
 
