@@ -2,6 +2,21 @@
 
 [![Platform](https://img.shields.io/badge/Support-iOS%2011.0+-brightgreen.svg)](https://img.shields.io/badge/Support-iOS%2011.0+-brightgreen.svg)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+------
+
+- [Feature](#feature)
+  * [Supported](#supported)
+  * [Chart configuration](#chart-configuration)
+  * [Render configuration](#render-configuration)
+  * [Calculator configuration](#calculator-configuration)
+- [Changelog](#changelog)
+- [Connecting dependencies](#connecting-dependencies)
+  * [CocoaPods](#cocoapods)
+  * [Carthage](#carthage)
+- [Fast integration](#fast-integration)
+- [Run Example](#run-example)
+- [License](#license)
+
 ## Feature
 
 ------
@@ -77,7 +92,7 @@ end
 
 Carthage is not currently supported.
 
-## Быстрая интеграция
+## Fast integration
 
 1. Create `AnalyticsChartSpriteKitModuleInputData`.
 
@@ -244,6 +259,6 @@ pod install
 4. Open `MobileAnalyticsChartSwift.xcworkspace`.
 5. Select and run a scheme `MobileAnalyticsChartSwiftExamplePods`.
 
-## Лицензия
+## License
 
 Mobile Analytics Chart Swift available under the MIT license. See the [LICENSE](https://github.com/yoomoney-tech/mobile-analytics-chart-swift/blob/master/LICENSE) file for more information.
