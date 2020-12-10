@@ -54,6 +54,7 @@ extension AnalyticsChartFactoryImpl: AnalyticsChartFactory {
                     rangeLabel: makeRangeLabelConfiguration(dateFormatter: longDateFormatter),
                     xAxis: makeXAxis(dateFormatter: shortDateFormatter),
                     yAxis: makeYAxis(),
+                    zeroLine: makeZeroLine(),
                     gestureState: makeGestureState(),
                     animation: makeAnimation(),
                     definition: makeChartDefinition(),
@@ -87,6 +88,7 @@ extension AnalyticsChartFactoryImpl: AnalyticsChartFactory {
                     rangeLabel: makeRangeLabelConfiguration(dateFormatter: longDateFormatter),
                     xAxis: makeXAxis(dateFormatter: shortDateFormatter),
                     yAxis: makeYAxis(),
+                    zeroLine: makeZeroLine(),
                     gestureState: makeGestureState(),
                     animation: makeAnimation(),
                     definition: makeChartDefinition(),
@@ -120,6 +122,7 @@ extension AnalyticsChartFactoryImpl: AnalyticsChartFactory {
                     rangeLabel: makeRangeLabelConfiguration(dateFormatter: longDateFormatter),
                     xAxis: makeXAxis(dateFormatter: shortDateFormatter),
                     yAxis: makeYAxis(),
+                    zeroLine: makeZeroLine(),
                     gestureState: makeGestureState(),
                     animation: makeAnimation(),
                     definition: makeChartDefinition(),
@@ -168,6 +171,7 @@ extension AnalyticsChartFactoryImpl: AnalyticsChartFactory {
                     rangeLabel: makeRangeLabelConfiguration(dateFormatter: longDateFormatter),
                     xAxis: makeXAxis(dateFormatter: shortDateFormatter),
                     yAxis: makeYAxis(),
+                    zeroLine: makeZeroLine(),
                     gestureState: makeGestureState(),
                     animation: makeAnimation(),
                     definition: makeChartDefinition(),
@@ -202,6 +206,7 @@ extension AnalyticsChartFactoryImpl: AnalyticsChartFactory {
                     rangeLabel: nil,
                     xAxis: nil,
                     yAxis: nil,
+                    zeroLine: nil,
                     gestureState: ChartGestureState(
                         swipeIsActive: false,
                         pinchIsActive: false,
@@ -239,6 +244,7 @@ extension AnalyticsChartFactoryImpl: AnalyticsChartFactory {
                     rangeLabel: makeRangeLabelConfiguration(dateFormatter: longDateFormatter),
                     xAxis: makeXAxis(dateFormatter: shortDateFormatter),
                     yAxis: makeYAxis(),
+                    zeroLine: makeZeroLine(),
                     gestureState: makeGestureState(),
                     animation: makeAnimation(),
                     definition: makeChartDefinition(),
@@ -272,6 +278,7 @@ extension AnalyticsChartFactoryImpl: AnalyticsChartFactory {
                     rangeLabel: makeRangeLabelConfiguration(dateFormatter: longDateFormatter),
                     xAxis: makeXAxis(dateFormatter: shortDateFormatter),
                     yAxis: makeYAxis(),
+                    zeroLine: makeZeroLine(),
                     gestureState: makeGestureState(),
                     animation: makeAnimation(),
                     definition: makeChartDefinition(),
@@ -305,6 +312,7 @@ extension AnalyticsChartFactoryImpl: AnalyticsChartFactory {
                     rangeLabel: makeRangeLabelConfiguration(dateFormatter: longDateFormatter),
                     xAxis: makeXAxis(dateFormatter: shortDateFormatter),
                     yAxis: makeYAxis(),
+                    zeroLine: makeZeroLine(),
                     gestureState: makeGestureState(),
                     animation: makeAnimation(),
                     definition: makeChartDefinition(),
@@ -339,6 +347,7 @@ extension AnalyticsChartFactoryImpl: AnalyticsChartFactory {
                     rangeLabel: makeRangeLabelConfiguration(dateFormatter: longDateFormatter),
                     xAxis: makeXAxis(dateFormatter: shortDateFormatter),
                     yAxis: makeYAxis(),
+                    zeroLine: makeZeroLine(),
                     gestureState: makeGestureState(),
                     animation: makeAnimation(),
                     definition: makeChartDefinition(),
@@ -372,6 +381,7 @@ extension AnalyticsChartFactoryImpl: AnalyticsChartFactory {
                     rangeLabel: makeRangeLabelConfiguration(dateFormatter: longDateFormatter),
                     xAxis: makeXAxis(dateFormatter: shortDateFormatter),
                     yAxis: makeYAxis(),
+                    zeroLine: makeZeroLine(),
                     gestureState: ChartGestureState(
                         swipeIsActive: false,
                         pinchIsActive: false,
@@ -414,6 +424,7 @@ extension AnalyticsChartFactoryImpl: AnalyticsChartFactory {
                     rangeLabel: makeRangeLabelConfiguration(dateFormatter: longDateFormatter),
                     xAxis: makeXAxis(dateFormatter: shortDateFormatter),
                     yAxis: makeYAxis(),
+                    zeroLine: makeZeroLine(),
                     gestureState: makeGestureState(),
                     animation: makeAnimation(),
                     definition: makeChartDefinition(),
@@ -466,6 +477,7 @@ extension AnalyticsChartFactoryImpl: AnalyticsChartFactory {
                     rangeLabel: makeRangeLabelConfiguration(dateFormatter: longDateFormatter),
                     xAxis: makeXAxis(dateFormatter: shortDateFormatter),
                     yAxis: makeYAxis(),
+                    zeroLine: makeZeroLine(),
                     gestureState: makeGestureState(),
                     animation: makeAnimation(),
                     definition: makeChartDefinition(),
@@ -641,6 +653,13 @@ extension AnalyticsChartFactoryImpl {
         )
     }
 
+    private func makeZeroLine() -> ChartZeroLine {
+        return ChartZeroLine(
+            color: Constants.ZeroLine.color,
+            width: Constants.ZeroLine.width
+        )
+    }
+
     private func makeGestureState() -> ChartGestureState {
         return ChartGestureState(
             swipeIsActive: Constants.Gesture.swipeIsActive,
@@ -758,6 +777,10 @@ private extension AnalyticsChartFactoryImpl {
                 static let color: UIColor = .border
                 static let width: CGFloat = 1.0
             }
+        }
+        enum ZeroLine {
+            static let color: UIColor = .borderZeroLine
+            static let width: CGFloat = 2.0
         }
         enum Gesture {
             static let swipeIsActive: Bool = true

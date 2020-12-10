@@ -506,6 +506,38 @@ extension CalculatorImpl: Calculator {
         }
     }
 
+    public func makeZeroLine(
+        frame: CGRect,
+        chartMargins: UIEdgeInsets,
+        minValue: CGFloat?,
+        maxValue: CGFloat?
+    ) -> (start: CGPoint, end: CGPoint)? {
+        guard valuesCount != 0,
+              let minValue = minValue ?? self.minValue,
+              let maxValue = maxValue ?? self.maxValue,
+              maxValue != minValue else {
+            return nil
+        }
+
+        let boundaryDiff = abs(maxValue - minValue)
+
+        guard boundaryDiff > 0 else {
+            return nil
+        }
+
+        let height = frame.height
+            - chartMargins.top
+            - chartMargins.bottom
+        let y = frame.minY
+            + chartMargins.bottom
+            - minValue / boundaryDiff * height
+
+        return (
+            start: CGPoint(x: frame.minX, y: y),
+            end: CGPoint(x: frame.maxX, y: y)
+        )
+    }
+
     public func makeRangeDates() -> (start: Date, end: Date?)? {
         guard let start = data.first?.dates.first else {
             return nil

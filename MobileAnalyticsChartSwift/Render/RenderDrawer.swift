@@ -10,6 +10,8 @@ public protocol RenderDrawer: class {
 
     func drawYAxisLabels()
 
+    func drawZeroLine()
+
     func drawRangeLabel()
 
     func drawDefinition()
