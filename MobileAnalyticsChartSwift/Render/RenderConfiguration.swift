@@ -12,6 +12,9 @@ public struct RenderConfiguration {
     /// Entity of chart y axis.
     public let yAxis: ChartYAxis?
 
+    /// Entity of chart zero line.
+    public let zeroLine: ChartZeroLine?
+
     /// Entity of chart gesture state.
     public let gestureState: ChartGestureState
 
@@ -42,6 +45,7 @@ public struct RenderConfiguration {
     ///     - rangeLabel: Entity of chart range label.
     ///     - xAxis: Entity of chart x axis.
     ///     - yAxis: Entity of chart y axis.
+    ///     - zeroLine: Entity of chart zero line.
     ///     - gestureState: Entity of chart gesture state.
     ///     - animation: Entity of chart animation.
     ///     - definition: Entity of chart definition.
@@ -56,6 +60,7 @@ public struct RenderConfiguration {
         rangeLabel: ChartRangeLabel?,
         xAxis: ChartXAxis?,
         yAxis: ChartYAxis?,
+        zeroLine: ChartZeroLine?,
         gestureState: ChartGestureState,
         animation: ChartAnimation,
         definition: ChartDefinition?,
@@ -68,6 +73,7 @@ public struct RenderConfiguration {
         self.rangeLabel = rangeLabel
         self.xAxis = xAxis
         self.yAxis = yAxis
+        self.zeroLine = zeroLine
         self.gestureState = gestureState
         self.animation = animation
         self.definition = definition

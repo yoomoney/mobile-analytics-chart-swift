@@ -123,6 +123,8 @@ public class RenderSpriteKitImpl: SKScene {
 
     private var yAxisLabels = BasicNode()
 
+    private var zeroLine = SquareNode()
+
     // MARK: - Addition
 
     private var handlerActivated = false
@@ -159,6 +161,7 @@ extension RenderSpriteKitImpl {
             rangeLabel,
             yAxis,
             yAxisLabels,
+            zeroLine,
             xAxisLabels,
             definitionNode,
             definitionView,
@@ -239,6 +242,7 @@ extension RenderSpriteKitImpl {
         }
 
         yAxis.zPosition = 2
+        zeroLine.zPosition = 2
 
         chartsNode.forEach {
             $0.zPosition = 3
@@ -270,6 +274,7 @@ extension RenderSpriteKitImpl {
         setupXAxisLabels()
         setupYAxisLines()
         setupYAxisLabels()
+        setupZeroLine()
     }
 
     private func setupChartNode() {
@@ -318,6 +323,10 @@ extension RenderSpriteKitImpl {
     private func setupYAxisLabels() {
         yAxisLabels.blendMode = .multiply
     }
+
+    private func setupZeroLine() {
+        zeroLine.blendMode = .alpha
+    }
 }
 
 // MARK: - Configuration
@@ -334,6 +343,9 @@ extension RenderSpriteKitImpl {
         }
         if let configurationYAxis = configuration.yAxis {
             configureYAxis(configurationYAxis)
+        }
+        if let configurationZeroLine = configuration.zeroLine {
+            configureZeroLine(configurationZeroLine)
         }
         if let configurationDefinition = configuration.definition {
             configureDefinitionNode(configurationDefinition)
@@ -431,6 +443,13 @@ extension RenderSpriteKitImpl {
         yAxis.strokeColor = configuration.lineColor
         yAxis.lineWidth = configuration.lineWidth
         yAxisLabelHeight = configuration.labelFont.lineHeight
+    }
+
+    private func configureZeroLine(
+        _ configuration: ChartZeroLine
+    ) {
+        zeroLine.strokeColor = configuration.color
+        zeroLine.lineWidth = configuration.width
     }
 
     private func configureGesture(
@@ -893,6 +912,7 @@ extension RenderSpriteKitImpl: RenderDrawer {
         drawChart()
         drawXAxis()
         drawYAxisLabels()
+        drawZeroLine()
         drawDefinition()
     }
 
@@ -1016,6 +1036,25 @@ extension RenderSpriteKitImpl: RenderDrawer {
             label.fontColor = SKColor(ciColor: CIColor(color: configurationYAxis.labelColor))
             label.position = $0.position
             yAxisLabels.addChild(label)
+        }
+    }
+
+    public func drawZeroLine() {
+        guard let configurationZeroLine = configuration.zeroLine else { return }
+
+        if let zeroLinePosition = calculator.makeZeroLine(
+            frame: chartFrame,
+            chartMargins: configuration.chartMargins,
+            minValue: currentMinValue,
+            maxValue: currentMaxValue
+        ) {
+            let path = CGMutablePath()
+            path.move(to: zeroLinePosition.start)
+            path.addLine(to: zeroLinePosition.end)
+            path.closeSubpath()
+            zeroLine.path = path.copy(dashingWithPhase: 5, lengths: [10, 10])
+        } else {
+            zeroLine.path = nil
         }
     }
 

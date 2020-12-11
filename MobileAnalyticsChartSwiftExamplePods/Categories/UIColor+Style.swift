@@ -11,13 +11,27 @@ extension UIColor {
         if #available(iOS 13, *) {
             return UIColor { (UITraitCollection: UITraitCollection) -> UIColor in
                 if UITraitCollection.userInterfaceStyle == .dark {
-                    return UIColor(white: 1, alpha: 0.12)
+                    return UIColor(white: 1, alpha: 0.05)
                 } else {
-                    return UIColor(white: 0, alpha: 0.12)
+                    return UIColor(white: 0, alpha: 0.05)
                 }
             }
         } else {
-            return UIColor(white: 0, alpha: 0.12)
+            return UIColor(white: 0, alpha: 0.05)
+        }
+    }()
+
+    static var borderZeroLine: UIColor = {
+        if #available(iOS 13, *) {
+            return UIColor { (UITraitCollection: UITraitCollection) -> UIColor in
+                if UITraitCollection.userInterfaceStyle == .dark {
+                    return UIColor(white: 1, alpha: 0.1)
+                } else {
+                    return UIColor(white: 0, alpha: 0.1)
+                }
+            }
+        } else {
+            return UIColor(white: 0, alpha: 0.21)
         }
     }()
 
