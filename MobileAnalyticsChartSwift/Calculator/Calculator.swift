@@ -61,6 +61,14 @@ public protocol Calculator {
         linesCount: Int
     ) -> [(position: CGPoint, value: CGFloat)]
 
+    /// Make zero line coordinate for zero line.
+    func makeZeroLine(
+        frame: CGRect,
+        chartMargins: UIEdgeInsets,
+        minValue: CGFloat?,
+        maxValue: CGFloat?
+    ) -> (start: CGPoint, end: CGPoint)?
+
     /// Make dates for range diapasone.
     func makeRangeDates() -> (start: Date, end: Date?)?
 

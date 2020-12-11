@@ -72,6 +72,7 @@
 		78201DA4250F9D6700408304 /* UIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78201D92250F9D6700408304 /* UIColor+Style.swift */; };
 		78201DA5250F9D6700408304 /* CGFloat+Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78201D93250F9D6700408304 /* CGFloat+Space.swift */; };
 		78201DA6250F9D6700408304 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78201D94250F9D6700408304 /* AppDelegate.swift */; };
+		783658F12582044000CBC150 /* ChartZeroLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783658F02582044000CBC150 /* ChartZeroLine.swift */; };
 		78E2D565250F9B7B0010639C /* MobileAnalyticsChartSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 78E2D563250F9B7B0010639C /* MobileAnalyticsChartSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78E2D57E250F9BB40010639C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E2D57C250F9BB40010639C /* LaunchScreen.storyboard */; };
 		78E6E8422510F9820052E3D4 /* CustomChartViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6E8412510F9820052E3D4 /* CustomChartViewIO.swift */; };
@@ -155,6 +156,7 @@
 		78201D92250F9D6700408304 /* UIColor+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Style.swift"; sourceTree = "<group>"; };
 		78201D93250F9D6700408304 /* CGFloat+Space.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Space.swift"; sourceTree = "<group>"; };
 		78201D94250F9D6700408304 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		783658F02582044000CBC150 /* ChartZeroLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartZeroLine.swift; sourceTree = "<group>"; };
 		78E2D560250F9B7B0010639C /* MobileAnalyticsChartSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MobileAnalyticsChartSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E2D563250F9B7B0010639C /* MobileAnalyticsChartSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileAnalyticsChartSwift.h; sourceTree = "<group>"; };
 		78E2D564250F9B7B0010639C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				78201D1E250F9D3700408304 /* ChartRangeLabel.swift */,
 				78201D1C250F9D3700408304 /* ChartXAxis.swift */,
 				78201D19250F9D3700408304 /* ChartYAxis.swift */,
+				783658F02582044000CBC150 /* ChartZeroLine.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -833,6 +836,7 @@
 				78201D43250F9D3700408304 /* AnalyticsDefinitionFactory.swift in Sources */,
 				78201D48250F9D3700408304 /* AnalyticsChartSpriteKitViewIO.swift in Sources */,
 				78201D44250F9D3700408304 /* AnalyticsYAxisLocalizationFactory.swift in Sources */,
+				783658F12582044000CBC150 /* ChartZeroLine.swift in Sources */,
 				78201D63250F9D3700408304 /* ColorTransition.swift in Sources */,
 				78201D65250F9D3700408304 /* Calculator.swift in Sources */,
 				78201D46250F9D3700408304 /* AnalyticsChartSpriteKitAssembly.swift in Sources */,
@@ -1008,6 +1012,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.yoo.kassa.MobileAnalyticsChartSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1032,6 +1037,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.yoo.kassa.MobileAnalyticsChartSwiftExamplePods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1182,6 +1188,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.yoo.kassa.MobileAnalyticsChartSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1208,6 +1215,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.yoo.kassa.MobileAnalyticsChartSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1232,6 +1240,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.yoo.kassa.MobileAnalyticsChartSwiftExamplePods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -1256,6 +1265,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.yoo.kassa.MobileAnalyticsChartSwiftExamplePods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
