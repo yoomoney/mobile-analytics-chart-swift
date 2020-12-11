@@ -5,6 +5,10 @@
 ### NEXT_VERSION_DESCRIPTION_BEGIN
 ### NEXT_VERSION_DESCRIPTION_END
 
+## [1.1.0] (11-12-2020)
+
+Added draw zero line.
+
 ## [1.0.0] (25-11-2020)
 
 Move mobile analytics chart library to open-source
