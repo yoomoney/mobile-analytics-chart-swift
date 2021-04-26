@@ -1,5 +1,5 @@
 PODS:
-  - MobileAnalyticsChartSwift (1.1.0)
+  - MobileAnalyticsChartSwift (1.2.0)
   - SwiftLint (0.27.0)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  MobileAnalyticsChartSwift: 5cc1bbb4b0eb97815f313a14cae8abd3e65ac741
+  MobileAnalyticsChartSwift: cea298673bef519adc54031144e322cef8392ebc
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
 PODFILE CHECKSUM: 31d319b88d1ce01558e41645a4f93f2a9519396b

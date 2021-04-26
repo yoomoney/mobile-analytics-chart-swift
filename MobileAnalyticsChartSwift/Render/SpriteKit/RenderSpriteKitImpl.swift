@@ -279,7 +279,7 @@ extension RenderSpriteKitImpl {
 
     private func setupChartNode() {
         chartsNode.forEach {
-            $0.blendMode = .multiplyAlpha
+            $0.blendMode = .alpha
         }
     }
 
@@ -289,7 +289,7 @@ extension RenderSpriteKitImpl {
     }
 
     private func setupDefinitionNode() {
-        definitionNode.blendMode = .multiply
+        definitionNode.blendMode = .alpha
         definitionsPoint.forEach {
             $0.blendMode = .alpha
         }
@@ -1052,7 +1052,7 @@ extension RenderSpriteKitImpl: RenderDrawer {
             path.move(to: zeroLinePosition.start)
             path.addLine(to: zeroLinePosition.end)
             path.closeSubpath()
-            zeroLine.path = path.copy(dashingWithPhase: 5, lengths: [10, 10])
+            zeroLine.path = path.copy(dashingWithPhase: 0, lengths: [10, 10])
         } else {
             zeroLine.path = nil
         }
