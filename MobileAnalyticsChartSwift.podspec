@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name      = 'MobileAnalyticsChartSwift'
-  s.version   = '1.1.0'
+  s.version   = '1.2.0'
   s.homepage  = 'https://github.com/yoomoney-tech/mobile-analytics-chart-swift/browse'
   s.license   = {
     :type => "MIT",
