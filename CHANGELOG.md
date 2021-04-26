@@ -5,6 +5,10 @@
 ### NEXT_VERSION_DESCRIPTION_BEGIN
 ### NEXT_VERSION_DESCRIPTION_END
 
+## [1.2.0] (26-04-2021)
+
+Change blend mode of chart line to alpha. Change dash pattern for zero line.
+
 ## [1.1.0] (11-12-2020)
 
 Added draw zero line.
