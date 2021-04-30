@@ -56,6 +56,20 @@
 
 ## Connecting dependencies
 
+### Swift Package Manager
+
+```swift
+dependencies: [
+  .package(url: "https://github.com/yoomoney-tech/mobile-analytics-chart-swift")
+],
+targets: [
+  .target(
+    name: "MyProject",
+    dependencies: [..., "MobileAnalyticsChartSwift"]
+  )
+...
+]
+```
 ### CocoaPods
 
 1. Install CocoaPods
