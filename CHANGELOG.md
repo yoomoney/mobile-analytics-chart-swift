@@ -7,7 +7,7 @@
 
 ## [1.3.0](30-04-2021)
 
-Add support swift package. Update Readme. Add AnalyticsChartSpriteKitModuleOutput.
+Add support swift package manager. Update Readme. Add AnalyticsChartSpriteKitModuleOutput.
 
 ## [1.2.0](26-04-2021)
 

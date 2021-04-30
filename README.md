@@ -1,6 +1,6 @@
 # Mobile Analytics Chart
 
-[![Platform](https://img.shields.io/badge/Support-iOS%2011.0+-brightgreen.svg)](https://img.shields.io/badge/Support-iOS%2011.0+-brightgreen.svg)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Platform](https://img.shields.io/badge/Support-iOS%2011.0+-brightgreen.svg)](https://img.shields.io/badge/Support-iOS%2011.0+-brightgreen.svg)[![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat)](https://cocoapods.org/)[![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://cocoapods.org/)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ------
 
