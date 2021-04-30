@@ -7,7 +7,6 @@ let package = Package(
   name: "MobileAnalyticsChartSwift",
   platforms: [
     .iOS(.v11),
-    .macOS(.v10_15),
   ],
   products: [
     .library(
