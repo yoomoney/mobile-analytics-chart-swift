@@ -1,6 +1,6 @@
 # Mobile Analytics Chart
 
-[![Platform](https://img.shields.io/badge/Support-iOS%2011.0+-brightgreen.svg)](https://img.shields.io/badge/Support-iOS%2011.0+-brightgreen.svg)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Platform](https://img.shields.io/badge/Support-iOS%2011.0+-brightgreen.svg)](https://img.shields.io/badge/Support-iOS%2011.0+-brightgreen.svg)[![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat)](https://cocoapods.org/)[![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://cocoapods.org/)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ------
 
@@ -11,6 +11,7 @@
   * [Calculator configuration](#calculator-configuration)
 - [Changelog](#changelog)
 - [Connecting dependencies](#connecting-dependencies)
+  * [Swift Package Manager](#swift-package-manager)
   * [CocoaPods](#cocoapods)
   * [Carthage](#carthage)
 - [Fast integration](#fast-integration)
@@ -38,7 +39,7 @@
 
 #### Render configuration
 
-- Customize range label, XAxis, YAxis, definition view
+- Customize range label, XAxis, YAxis, zero line, definition view
 - Toggle gesture (Swipe, pinch and handle)
 - Setup redraw animation duration
 - Configure insets and margins 
@@ -188,6 +189,12 @@ let yAxis = ChartYAxis(
   lineWidth: 1
 )
 
+// Creating a zero line
+let zeroLine = ChartZeroLine(
+    color: UIColor(white: 236 / 255, alpha: 1),
+    width: 1
+)
+
 // Creating a gesture state configuration
 let gestureState = ChartGestureState(
   swipeIsActive: true,
@@ -223,6 +230,7 @@ let chartViewModel = AnalyticsChartSpriteKitModuleInputData(
     rangeLabel: rangeLabel,
     xAxis: xAxis,
     yAxis: yAxis,
+    zeroLine: zeroLine,
     gestureState: gestureState,
     animation: animation,
     definition: definition,

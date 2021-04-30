@@ -1,3 +1,4 @@
+import CoreGraphics
 import MobileAnalyticsChartSwift
 
 final class CustomChartPresenter {
@@ -22,7 +23,8 @@ final class CustomChartPresenter {
 extension CustomChartPresenter: CustomChartViewOutput {
     func setupView() {
         let (chartView, moduleInput) = AnalyticsChartSpriteKitAssembly.makeModule(
-            inputData: analyticsChartViewModel.data
+            inputData: analyticsChartViewModel.data,
+            moduleOutput: self
         )
 
         analyticsChartSpriteKitModuleInput = moduleInput
@@ -57,5 +59,29 @@ extension CustomChartPresenter: CustomChartViewOutput {
 
     func didPressSetIdleStateButton() {
         analyticsChartSpriteKitModuleInput?.setChartIdleState()
+    }
+}
+
+extension CustomChartPresenter: AnalyticsChartSpriteKitModuleOutput {
+    func didChangeRangeValue(
+        rangeValue: RangeValue<CGFloat>
+    ) {
+        print(#function, rangeValue)
+    }
+
+    func didHandleLongPress() {
+        print(#function)
+    }
+
+    func didHandlePan(
+        deltaLocation: CGFloat
+    ) {
+        print(#function, deltaLocation)
+    }
+
+    func didHandlePinch(
+        scale: CGFloat
+    ) {
+        print(#function, scale)
     }
 }

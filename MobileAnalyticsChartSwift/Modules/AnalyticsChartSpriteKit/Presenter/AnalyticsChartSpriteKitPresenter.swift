@@ -6,7 +6,7 @@ final public class AnalyticsChartSpriteKitPresenter {
     // MARK: - VIPER
 
     weak var view: AnalyticsChartSpriteKitViewInput?
-    weak var renderDrawerModuleInput: RenderDrawerModuleInput?
+    weak var moduleOutput: AnalyticsChartSpriteKitModuleOutput?
 
     // MARK: - Init data
 
@@ -39,6 +39,10 @@ final public class AnalyticsChartSpriteKitPresenter {
         self.analyticsYAxisLocalizationFactory = analyticsYAxisLocalizationFactory
         self.analyticsDefinitionFactory = analyticsDefinitionFactory
     }
+
+    // MARK: - Module input
+
+    private weak var renderDrawerModuleInput: RenderDrawerModuleInput?
 
     // MARK: - Stored data
 
@@ -98,17 +102,24 @@ extension AnalyticsChartSpriteKitPresenter: RenderDrawerModuleOutput {
         rangeValue: RangeValue<CGFloat>
     ) {
         self.rangeValue = rangeValue
+        moduleOutput?.didChangeRangeValue(rangeValue: rangeValue)
     }
 
-    public func didHandleLongPress() {}
+    public func didHandleLongPress() {
+        moduleOutput?.didHandleLongPress()
+    }
 
     public func didHandlePan(
         deltaLocation: CGFloat
-    ) {}
+    ) {
+        moduleOutput?.didHandlePan(deltaLocation: deltaLocation)
+    }
 
     public func didHandlePinch(
         scale: CGFloat
-    ) {}
+    ) {
+        moduleOutput?.didHandlePinch(scale: scale)
+    }
 }
 
 // MARK: - AnalyticsChartSpriteKitModuleInput
