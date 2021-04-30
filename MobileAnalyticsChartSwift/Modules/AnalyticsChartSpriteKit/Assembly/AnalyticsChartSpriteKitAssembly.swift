@@ -5,7 +5,8 @@ public enum AnalyticsChartSpriteKitAssembly {
 
     /// Make AnalyticsChartSpriteKit module.
     public static func makeModule(
-        inputData: AnalyticsChartSpriteKitModuleInputData
+        inputData: AnalyticsChartSpriteKitModuleInputData,
+        moduleOutput: AnalyticsChartSpriteKitModuleOutput? = nil
     ) -> (UIView, AnalyticsChartSpriteKitModuleInput) {
         let view = AnalyticsChartSpriteKitView()
 
@@ -22,6 +23,7 @@ public enum AnalyticsChartSpriteKitAssembly {
         view.output = presenter
 
         presenter.view = view
+        presenter.moduleOutput = moduleOutput
 
         return (view, presenter)
     }

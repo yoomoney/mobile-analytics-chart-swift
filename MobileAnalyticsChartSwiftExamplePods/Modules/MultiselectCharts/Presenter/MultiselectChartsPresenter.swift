@@ -70,3 +70,27 @@ extension MultiselectChartsPresenter: MultiselectChartsViewOutput {
         )
     }
 }
+
+extension MultiselectChartsPresenter: AnalyticsChartSpriteKitModuleOutput {
+    func didChangeRangeValue(
+        rangeValue: RangeValue<CGFloat>
+    ) {
+        print(#function, rangeValue)
+    }
+
+    func didHandleLongPress() {
+        print(#function)
+    }
+
+    func didHandlePan(
+        deltaLocation: CGFloat
+    ) {
+        print(#function, deltaLocation)
+    }
+
+    func didHandlePinch(
+        scale: CGFloat
+    ) {
+        print(#function, scale)
+    }
+}

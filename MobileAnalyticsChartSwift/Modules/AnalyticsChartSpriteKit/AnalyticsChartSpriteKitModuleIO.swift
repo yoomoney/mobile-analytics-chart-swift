@@ -52,3 +52,20 @@ public protocol AnalyticsChartSpriteKitModuleInput: class {
 
     func setChartIdleState()
 }
+
+/// AnalyticsChartSpriteKit module output
+public protocol AnalyticsChartSpriteKitModuleOutput: class {
+    func didChangeRangeValue(
+        rangeValue: RangeValue<CGFloat>
+    )
+
+    func didHandleLongPress()
+
+    func didHandlePan(
+        deltaLocation: CGFloat
+    )
+
+    func didHandlePinch(
+        scale: CGFloat
+    )
+}
