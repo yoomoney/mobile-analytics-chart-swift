@@ -5,6 +5,10 @@
 ------
 
 - [Feature](#feature)
+  * [Animation redrawing](#animation-redrawing)
+  * [Gestures](#gestures)
+  * [Loading state](#loading-state)
+  * [An intermediate value](#an-intermediate-value)
   * [Supported](#supported)
   * [Chart configuration](#chart-configuration)
   * [Render configuration](#render-configuration)
@@ -21,6 +25,22 @@
 ## Feature
 
 ------
+
+#### Animation redrawing
+
+![Animation redrawing](Resources/redraw.gif)
+
+#### Gestures
+
+![Gestures](Resources/gesture.gif)
+
+#### Loading state
+
+![Loading state](Resources/loading.gif)
+
+#### An intermediate value
+
+<img src="Resources/definition.gif" alt="An intermediate value" style="zoom:70%;" />
 
 #### Supported
 
