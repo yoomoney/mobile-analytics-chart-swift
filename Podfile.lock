@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  MobileAnalyticsChartSwift: 2ca24f4abaf166427025adbf6bc75e15969677c5
+  MobileAnalyticsChartSwift: 2efcd20eb80da20ca77b5c65b31cdfb6a6f5f2f0
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
 PODFILE CHECKSUM: 31d319b88d1ce01558e41645a4f93f2a9519396b

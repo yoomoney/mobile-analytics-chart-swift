@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name      = 'MobileAnalyticsChartSwift'
   s.version   = '1.3.0'
-  s.homepage  = 'https://github.com/yoomoney-tech/mobile-analytics-chart-swift/browse'
+  s.homepage  = 'https://github.com/yoomoney/mobile-analytics-chart-swift/browse'
   s.license   = {
     :type => "MIT",
     :file => "LICENSE"
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.summary = 'Mobile Analytics Chart'
 
   s.source = {
-    :git => 'https://github.com/yoomoney-tech/mobile-analytics-chart-swift.git',
+    :git => 'https://github.com/yoomoney/mobile-analytics-chart-swift.git',
     :tag => s.version.to_s
   }
 

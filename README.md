@@ -73,7 +73,7 @@
 
 ## Changelog
 
-[Link to Changelog](https://github.com/yoomoney-tech/mobile-analytics-chart-swift/tree/master/CHANGELOG.md)
+[Link to Changelog](https://github.com/yoomoney/mobile-analytics-chart-swift/tree/master/CHANGELOG.md)
 
 ## Connecting dependencies
 
@@ -81,7 +81,7 @@
 
 ```swift
 dependencies: [
-  .package(url: "https://github.com/yoomoney-tech/mobile-analytics-chart-swift")
+  .package(url: "https://github.com/yoomoney/mobile-analytics-chart-swift")
 ],
 targets: [
   .target(
@@ -104,7 +104,7 @@ gem install cocoapods
   > CocoaPods provides ```pod init``` command to create a Podfile with default settings.
 
 3. Add dependencie in `Podfile`.\
-   [Example](https://github.com/yoomoney-tech/mobile-analytics-chart-swift/tree/master/MobileAnalyticsChartSwiftExamplePods/Podfile-example) `Podfile`from demo-app.
+   [Example](https://github.com/yoomoney/mobile-analytics-chart-swift/tree/master/MobileAnalyticsChartSwiftExamplePods/Podfile-example) `Podfile`from demo-app.
 
 ```shell
 source 'https://github.com/CocoaPods/Specs.git'
@@ -113,13 +113,13 @@ use_frameworks!
 
 target 'Your Target Name' do
 pod 'MobileAnalyticsChartSwift',
-  :git => 'https://github.com/yoomoney-tech/mobile-analytics-chart-swift.git',
+  :git => 'https://github.com/yoomoney/mobile-analytics-chart-swift.git',
   :tag => 'tag'
 end
 ```
 
   > `Your Target Name` - the target name in Xcode for your application.\
-  > `tag` - SDK version. The current version can be found on github in the [releases](https://github.com/yoomoney-tech/mobile-analytics-chart-swift/releases).
+  > `tag` - SDK version. The current version can be found on github in the [releases](https://github.com/yoomoney/mobile-analytics-chart-swift/releases).
 
 4. Run the command ```pod install```
 
@@ -287,7 +287,7 @@ To run the Example application, you need to:
 1. Make a `git clone` of the repository.
 
 ```shell
-git clone https://github.com/yoomoney-tech/mobile-analytics-chart-swift.git
+git clone https://github.com/yoomoney/mobile-analytics-chart-swift.git
 ```
 
 2. Go to the project folder in the console and execute the following commands:
@@ -303,4 +303,4 @@ pod install
 
 ## License
 
-Mobile Analytics Chart Swift available under the MIT license. See the [LICENSE](https://github.com/yoomoney-tech/mobile-analytics-chart-swift/blob/master/LICENSE) file for more information.
+Mobile Analytics Chart Swift available under the MIT license. See the [LICENSE](https://github.com/yoomoney/mobile-analytics-chart-swift/blob/master/LICENSE) file for more information.
