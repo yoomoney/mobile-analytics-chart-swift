@@ -536,6 +536,7 @@
 		78E2D556250F9B7B0010639C = {
 			isa = PBXGroup;
 			children = (
+				7BACD13E26CF5349009C5957 /* AnalyticsView.swift */,
 				78E2D562250F9B7B0010639C /* MobileAnalyticsChartSwift */,
 				78E2D570250F9BB30010639C /* MobileAnalyticsChartSwiftExamplePods */,
 				78E2D561250F9B7B0010639C /* Products */,
@@ -564,7 +565,6 @@
 				78201D3E250F9D3700408304 /* Models */,
 				78201D05250F9D3700408304 /* Modules */,
 				78201D11250F9D3700408304 /* Render */,
-				7BACD13E26CF5349009C5957 /* AnalyticsView.swift */,
 			);
 			path = MobileAnalyticsChartSwift;
 			sourceTree = "<group>";
