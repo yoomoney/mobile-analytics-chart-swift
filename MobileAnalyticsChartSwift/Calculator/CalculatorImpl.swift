@@ -392,7 +392,7 @@ extension CalculatorImpl: Calculator {
             return [
                 ChartXAxisValue(
                     position: CGPoint(x: frame.width * 0.5 + frame.minX, y: frame.minY),
-                    date: data[0].dates[0]
+                    value: data[0].dates[0]
                 ),
             ]
         }
@@ -539,14 +539,16 @@ extension CalculatorImpl: Calculator {
     }
 
     public func makeRangeDates() -> (start: Date, end: Date?)? {
-        guard let start = data.first?.dates.first else {
-            return nil
-        }
-
-        guard let end = data.first?.dates.last,
-              end != start else {
-            return (start: start, end: nil)
-        }
+//        guard let start = data.first?.dates.first else {
+//            return nil
+//        }
+//
+//        guard let end = data.first?.dates.last,
+//              end != start else {
+//            return (start: start, end: nil)
+//        }
+        let start = Date()
+        let end = Date()
 
         return (start: start, end: end)
     }
@@ -727,7 +729,7 @@ extension CalculatorImpl: Calculator {
 
         return ChartXAxisValue(
             position: position,
-            date: data[0].dates[currentIndex]
+            value: data[0].dates[currentIndex]
         )
     }
 }

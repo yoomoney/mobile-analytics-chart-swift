@@ -5,7 +5,7 @@ import Foundation
 public struct ChartDefinitionValues {
 
     /// Date for definition.
-    public let date: Date
+    public let date: CGFloat//Date
 
     /// Definition line position.
     public let linePosition: (start: CGPoint, end: CGPoint)
@@ -22,7 +22,7 @@ public struct ChartDefinitionValues {
     ///
     /// - Returns: Instance of `ChartDefinitionValues`.
     public init(
-        date: Date,
+        date: CGFloat,//Date,
         linePosition: (start: CGPoint, end: CGPoint),
         chartValues: [(value: CGFloat, pointPosition: CGPoint)]
     ) {
