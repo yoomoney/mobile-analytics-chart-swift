@@ -981,8 +981,8 @@ extension RenderSpriteKitImpl: RenderDrawer {
 
         xAxisLabels.removeAllChildren()
         xAxisValues.forEach {
-            let dateText = configurationXAxis.dateFormatter.string(from: $0.date)
-            let label = SKLabelNode(text: dateText)
+            let text =  analyticsYAxisLocalizationFactory.makeYAxisText($0.value)
+            let label = SKLabelNode(text: text)
             label.blendMode = .multiply
             label.zPosition = 2
             label.fontSize = configurationXAxis.labelFont.pointSize
@@ -1070,9 +1070,9 @@ extension RenderSpriteKitImpl: RenderDrawer {
         let startDateText = dateFormatter.string(from: dates.start)
         if let endDate = dates.end {
             let endDateText = dateFormatter.string(from: endDate)
-            rangeText = "\(startDateText) - \(endDateText)"
+            rangeText = ""//"\(startDateText) - \(endDateText)"
         } else {
-            rangeText = "\(startDateText)"
+            rangeText = "" //"\(startDateText)"
         }
 
         rangeLabel.text = rangeText
@@ -1132,7 +1132,8 @@ extension RenderSpriteKitImpl: RenderDrawer {
             )
         }
 
-        definitionDateLabel.text = definitionConfiguration.view.dateFormatter.string(from: definitionValues.date)
+        definitionDateLabel.text = "\(definitionValues.date)"
+            //definitionConfiguration.view.dateFormatter.string(from: definitionValues.date)
         maxDefinitionLabelWidth = max(
             maxDefinitionLabelWidth,
             definitionDateLabel.frame.width

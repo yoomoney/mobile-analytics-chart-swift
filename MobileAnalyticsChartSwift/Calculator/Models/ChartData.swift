@@ -8,7 +8,7 @@ public struct ChartData {
     public let values: [CGFloat]
 
     /// Chart date set.
-    public let dates: [Date]
+    public let dates: [CGFloat]
 
     /// Creates instance of `ChartData`.
     ///
@@ -19,7 +19,7 @@ public struct ChartData {
     /// - Returns: Instance of `ChartData`.
     public init(
         values: [CGFloat],
-        dates: [Date]
+        dates: [CGFloat]
     ) {
         self.values = values
         self.dates = dates
